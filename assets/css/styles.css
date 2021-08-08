@@ -1,0 +1,384 @@
+/* STILI GENERALI */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+
+}
+
+
+body{
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
+  color:rgb(211, 211, 211);
+}
+
+
+/* STILE TESTI */
+h1{
+  color:#edffe9;
+  font-weight:300;
+  font-size:30px;
+}
+
+h2{
+  color:#edffe9;
+  font-weight:400;
+  font-size:20px;
+}
+
+h3{
+  color:#edffe9;
+  font-weight:400;
+  font-size:16px;
+}
+h4{
+  color:#edffe9;
+  font-weight:400;
+  font-size:14px;
+}
+
+p{
+  color:#edffe9;
+  font-weight:400;
+  font-size:13px;
+}
+
+a{
+  color:#edffe9;
+  font-weight:500;
+}
+
+a:hover{
+  color:#d7dfd5;
+}
+
+
+/* STILE CONTENITORE (DIV) PAGINE ABOUT/BORING/CONTACT */
+
+.div-1{
+  display:flex;
+  flex-direction: column;
+  margin:auto;
+  width:30%;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  .div-1{
+    width:100%;
+    padding:0 20px;
+  }
+
+}
+
+
+/* STILE CONTENITORE (DIV) PAGINA PROJECTS */
+.div-2{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+
+/* MARGINI H1 E H2 TESTI */
+
+.div-1> h1, .div-2 >h1, .buttons-container >h1{
+  margin: 30px 0;
+
+}
+
+.div-1> h2, .div-2 >h2{
+  margin: 30px 0;
+}
+
+
+/* STILE HEADER */
+
+nav:hover{
+  cursor:pointer;
+  background-color:#edffe9 !important;
+  color:#323133 !important;
+
+}
+
+header{
+  width:100%;
+  display: flex;
+  position:fixed;
+  top:0;
+  justify-content: space-between;
+  padding:50px 50px 20px 50px;
+  background-color:#333234;
+}
+
+.header-height{
+  height:94px;
+}
+
+.logo{
+  margin: auto 0;
+}
+
+.icon:hover{
+  fill:#edffe9;
+}
+
+.back{
+  position:absolute;
+  display:none;
+  border: 1px solid;
+  padding: 2px 14px;
+  color: #edffe9;
+}
+
+.back > svg{
+  margin-right: 10px;
+  padding-top:4px;
+  fill:#edffe9;
+}
+
+
+.projects{
+  margin-left:auto;
+  border: 1px solid;
+  padding: 2px 14px;
+  color: #edffe9;
+}
+
+.about{
+  margin-left:30px;
+  border: 1px solid;
+  padding: 2px 17px;
+  color: #edffe9;
+}
+
+.avatar{
+  width:120px;
+  float:right;
+  margin: 5px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+  header{
+    padding:20px;
+  }
+  .header-height{
+    height:70px;
+  }
+}
+
+/* STILE FOOTER */
+
+footer{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-black{
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+  padding:20px 50px 50px 50px;
+  position:fixed;
+  bottom:0;
+  background-color:#333234;
+}
+
+.boringpage{
+  border: 1px solid;
+  padding: 2px 14px;
+  color: #edffe9;
+}
+
+.contact{
+  padding-left:auto;
+  border: 1px solid;
+  padding: 2px 14px;
+  color: #edffe9;
+}
+
+@media only screen and (max-width: 600px) {
+  .footer-black{
+  padding:20px;
+  }
+}
+
+
+
+/* BORING PAGE */
+
+#my-boringpage-div > h2{
+font-size:18px;
+}
+
+#my-boringpage-div > p{
+  color:#bbbbbb;
+  margin-left:20px;
+}
+
+#my-boringpage-div > h4{
+  color:#fff;
+  margin-left:20px;
+  margin-top:5px;
+}
+
+#my-boringpage-div > p.boring-message {
+  margin:20px 0 0 0;
+}
+
+
+/* PAGINA PROGETTI */
+
+#my-projects-div{
+  display:none;
+}
+
+.button{
+  display:flex;
+  min-width:17%;
+  padding: 15px 10px;
+  margin-bottom:25px;
+  border: solid 1px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 13px;
+  box-shadow: 4px 4px 0px 0px #edffe9;
+  justify-content: center;
+
+}
+
+a.button{
+  color:#edffe9;
+
+
+}
+
+.button:hover{
+  background-color: #141414;
+}
+
+.new-icon{
+  width:30px;
+  position: relative;
+  top: 10px;
+  right: 10px;
+  animation: blinker 2s linear infinite;
+}
+.award-icon{
+  width:20px;
+  position: relative;
+  top: 15px;
+  right: 5px;
+}
+
+
+
+@keyframes blinker {
+  50%{ opacity:0;}
+  }
+
+img.icon-link{
+  margin-left:auto;
+}
+
+img.icon:hover{
+  filter:brightness(5);
+}
+
+
+
+
+.buttons-container{
+  min-width:17%;
+  display:flex;
+  flex-direction:column;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+
+  .button{
+    min-width:80%;
+  }
+
+  .buttons-container{
+    min-width:80%;
+  }
+}
+
+
+/* PAGINA BORING PAGE */
+
+#my-boringpage-div{
+  display:none;
+}
+
+
+/* PAGINA ABOUT */
+
+#my-about-div{
+  display:none;
+}
+
+/* PAGINA CONTATTI */
+
+#my-contact-div{
+  display:none;
+}
+
+.social-icons{
+  display:flex;
+  margin-bottom:25px;
+}
+.social-icons > img{
+  width:18px;
+  height: 18px;
+  margin-right:10px;
+}
+
+/* STILE CONTACT FORM */
+
+.form-control{
+  width:100%;
+  border-radius:0px;
+  border: 1px solid #edffe9;
+  padding: 15px 10px;
+  margin: 5px 0;
+  background-color: transparent;
+  font-family: 'Roboto Mono', monospace;
+  color:#edffe9;
+  font-size:14px;
+}
+
+textarea.form-control{
+  padding-bottom:80px;
+}
+
+input:placeholder{
+  color:#a9c0a4;
+}
+
+
+.btn.btn-success{
+  display:flex;
+  min-width:100%;
+  padding: 15px 0;
+  margin-bottom:25px;
+  border: solid 1px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 15px;
+  color: #edffe9;
+  border: 1px solid #edffe9;
+  background-color: transparent;
+  box-shadow: 4px 4px 0px 0px #edffe9;
+  justify-content: center;
+}
+
+.btn.btn-success:hover{
+    background-color: #141414;
+}

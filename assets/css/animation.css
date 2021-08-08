@@ -1,0 +1,182 @@
+body {
+  background-color: #323133;
+}
+
+body:after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  z-index: 1000;
+  background: repeating-linear-gradient(0deg, #111 0px, #111 1px, transparent 2px, transparent 5px);
+  background-size: 100% 5px;
+  -webkit-animation: lines 2s ease-out infinite;
+          animation: lines 2s ease-out infinite;
+  opacity: 0.3;
+  mix-blend-mode: color-burn;
+  pointer-events: none;
+}
+
+
+.r, .g, .b{
+  width: 300.23px;
+}
+
+
+div.text.uno{
+  top: 35%;
+  position:absolute;
+}
+div.text.due{
+  top: 38%;
+  position:absolute;
+}
+div.text.tre{
+  top: 41%;
+  left: 32%;
+  position:absolute;
+}
+div.text.quattro{
+  top: 44%;
+  position:absolute;
+}
+div.text.cinque{
+  top: 49%;
+  position:absolute;
+}
+div.text.sei{
+  top: 52%;
+  left: 32%;
+  position:absolute;
+}
+div.text.sette{
+  top: 55%;
+  left: 34%;
+  position:absolute;
+}
+div.text.otto{
+  top: 58%;
+  left: 34%;
+  position:absolute;
+}
+div.text.nove{
+  top: 61%;
+  left: 32%;
+  position:absolute;
+}
+div.text.dieci{
+  top: 64%;
+  position:absolute;
+}
+div.text.undici{
+  top: 67%;
+  position:absolute;
+  animation: blinker 1s linear infinite;
+}
+
+
+
+body .text, body .text > * {
+  position: absolute;
+  left:30%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 600px) {
+  body .text, body .text > * {
+    left:45%;
+  }
+  div.text.tre{
+    left:50%;
+  }
+  div.text.sei{
+    left:50%;
+  }
+  div.text.sette{
+    left:55%;
+  }
+  div.text.otto{
+    left:55%;
+  }
+  div.text.nove{
+    left:50%;
+  }
+}
+
+body .text > * {
+  font-size: 20px;
+  -webkit-animation: giggle 1.5s ease infinite;
+          animation: giggle 1.5s ease infinite;
+  mix-blend-mode: difference;
+}
+
+body .text .r {
+  color: #f00;
+  left: -0.5px;
+}
+
+body .text .g {
+  color: #0f0;
+  -webkit-animation-delay: -0.67s;
+          animation-delay: -0.67s;
+  left:-0.5px;
+}
+
+body .text .b {
+  color: #00f;
+  -webkit-animation-delay: -0.33s;
+          animation-delay: -0.33s;
+  left: 0.5px;
+}
+
+/* ANIMAZIONI */
+
+
+@-webkit-keyframes giggle {
+  0%, 100% {
+    -webkit-transform: translate(-50%, -50%) translateY(-1px);
+            transform: translate(-50%, -50%) translateY(-1px);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) translateY(1px);
+            transform: translate(-50%, -50%) translateY(1px);
+  }
+}
+
+@keyframes giggle {
+  0%, 100% {
+    -webkit-transform: translate(-50%, -50%) translateY(-1px);
+            transform: translate(-50%, -50%) translateY(-1px);
+  }
+  50% {
+    -webkit-transform: translate(-50%, -50%) translateY(1px);
+            transform: translate(-50%, -50%) translateY(1px);
+  }
+}
+
+@-webkit-keyframes lines {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 0px 25px;
+  }
+}
+
+@keyframes lines {
+  0% {
+    background-position: 0px 0px;
+  }
+  100% {
+    background-position: 0px 25px;
+  }
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
